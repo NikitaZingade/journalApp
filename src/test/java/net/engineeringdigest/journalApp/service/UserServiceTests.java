@@ -19,7 +19,7 @@ import net.engineeringdigest.journalApp.repository.UserRepository;
 
 @Disabled
 @SpringBootTest
-public class UserServiceTests {
+ class UserServiceTests {
 	@Autowired
 	private UserRepository userRepository;
 	
@@ -30,7 +30,7 @@ public class UserServiceTests {
 	@Disabled
 	@ParameterizedTest
 	@ArgumentsSource(UserArgumentsProvider.class)
-	public void testSaveNewUser(User user ) { 
+	 void testSaveNewUser(User user ) { 
 		//User user = userRepository.findByUserName("ram");
 		assertTrue(userService.saveNewUser(user));
 		//assertTrue(!user.getJournalEntries().isEmpty());
@@ -43,7 +43,7 @@ public class UserServiceTests {
 		"shyam",
 		"vipul"
 	}) 	
-	public void testAdd(String name) {
+	 void testAdd(String name) {
 		assertEquals(4,2+2);
 		assertNotNull(userRepository.findByUserName(name), "failed for: "+name);
 //		User user = userRepository.findByUserName("ram");
@@ -57,7 +57,7 @@ public class UserServiceTests {
 		"2,10,12",
 		"3,3,9"
 	})
-	public void test(int a, int b, int expected) {
+	 void test(int a, int b, int expected) {
 		assertEquals(expected, a+b);
 	}
 }
