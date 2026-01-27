@@ -26,8 +26,7 @@ public class JournalEntryService {
 	
 	@Autowired
 	private UserService userService;
-	
-	
+		
 	@Transactional
 	public void saveEntry(JournalEntry journalEntry, String userName) {
 		try {
