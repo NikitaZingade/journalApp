@@ -25,6 +25,8 @@ public class User {
 	@Indexed(unique=true)
 	@NonNull
 	private String userName;
+	private String email;
+	private boolean sentimateAnalysis;
 	@NonNull
 	private String password;
 	@DBRef
